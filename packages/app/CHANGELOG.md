@@ -1,5 +1,25 @@
 # example-app
 
+## 0.2.7
+
+### Patch Changes
+
+- Updated dependencies [48c305e69]
+- Updated dependencies [ab805860a]
+- Updated dependencies [dae4f3983]
+- Updated dependencies [0e6298f7e]
+- Updated dependencies [3b50f833d]
+- Updated dependencies [c36a01b4c]
+- Updated dependencies [962d1ad66]
+  - @backstage/plugin-cost-insights@0.5.2
+  - @backstage/plugin-org@0.3.2
+  - @backstage/plugin-techdocs@0.5.0
+  - @backstage/catalog-model@0.5.1
+  - @backstage/plugin-pagerduty@0.2.3
+  - @backstage/cli@0.4.2
+  - @backstage/plugin-sentry@0.3.1
+  - @backstage/plugin-catalog@0.2.7
+
 ## 0.2.6
 
 ### Patch Changes

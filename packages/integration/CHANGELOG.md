@@ -1,5 +1,11 @@
 # @backstage/integration
 
+## 0.1.4
+
+### Patch Changes
+
+- 178e09323: Validate that integration config contains a valid host
+
 ## 0.1.3
 
 ### Patch Changes

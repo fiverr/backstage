@@ -1,5 +1,16 @@
 # @backstage/plugin-catalog-backend
 
+## 0.4.1
+
+### Patch Changes
+
+- c6eeefa35: Add support for Github Enterprise in GitHubOrgReaderProcessor so you can properly ingest users of a GHE organization.
+- fb386b760: Break the refresh loop into several smaller transactions
+- 8c31c681c: Batch the writing of statuses after refreshes. This reduced the runtime on sqlite from 16s to 0.2s, and on pg from 60s to 1s on my machine, for the huge LDAP set.
+- 7b98e7fee: Add index to foreign key columns. Postgres (and others) do not do this on the "source" side of a foreign key relation, which was what led to the slowness on large datasets. The full LDAP dataset ingestion now takes two minutes, which is not optimal yet but still a huge improvement over before when it basically never finished :)
+- Updated dependencies [0e6298f7e]
+  - @backstage/catalog-model@0.5.1
+
 ## 0.4.0
 
 ### Minor Changes

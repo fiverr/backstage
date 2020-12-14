@@ -1,5 +1,22 @@
 # example-backend
 
+## 0.2.7
+
+### Patch Changes
+
+- Updated dependencies [c6eeefa35]
+- Updated dependencies [fb386b760]
+- Updated dependencies [dae4f3983]
+- Updated dependencies [7b15cc271]
+- Updated dependencies [0e6298f7e]
+- Updated dependencies [8c31c681c]
+- Updated dependencies [7b98e7fee]
+  - @backstage/plugin-catalog-backend@0.4.1
+  - @backstage/plugin-techdocs-backend@0.4.0
+  - @backstage/plugin-auth-backend@0.2.7
+  - @backstage/catalog-model@0.5.1
+  - example-app@0.2.7
+
 ## 0.2.6
 
 ### Patch Changes

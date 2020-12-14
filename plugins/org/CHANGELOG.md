@@ -1,5 +1,15 @@
 # @backstage/plugin-org
 
+## 0.3.2
+
+### Patch Changes
+
+- ab805860a: Ensure a name is always displayed for user entities in the org plugin. This can happen when there is no profile
+  displayName provided (e.g. a GitHub user that has not added a name to their profile)
+- Updated dependencies [0e6298f7e]
+  - @backstage/catalog-model@0.5.1
+  - @backstage/plugin-catalog@0.2.7
+
 ## 0.3.1
 
 ### Patch Changes

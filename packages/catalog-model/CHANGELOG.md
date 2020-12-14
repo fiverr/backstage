@@ -1,5 +1,11 @@
 # @backstage/catalog-model
 
+## 0.5.1
+
+### Patch Changes
+
+- 0e6298f7e: Ignore relations when comparing entities. This stops the refresh loop from rewriting entities over and over.
+
 ## 0.5.0
 
 ### Minor Changes
