@@ -20,6 +20,7 @@ import { BackstageTheme } from '@backstage/theme';
 import { RenderNodeProps } from './types';
 
 const useStyles = makeStyles((theme: BackstageTheme) => ({
+  g: {},
   node: {
     fill: theme.palette.background.paper,
     stroke: theme.palette.border,
@@ -29,7 +30,9 @@ const useStyles = makeStyles((theme: BackstageTheme) => ({
   },
 }));
 
-export function DefaultNode({ node: { id } }: RenderNodeProps) {
+export function DefaultNode({
+  node: { id, classNames = {}, ...props },
+}: RenderNodeProps) {
   const classes = useStyles();
   const [width, setWidth] = React.useState(0);
   const [height, setHeight] = React.useState(0);
@@ -57,16 +60,16 @@ export function DefaultNode({ node: { id } }: RenderNodeProps) {
   const paddedHeight = height + padding * 2;
 
   return (
-    <g>
+    <g className={`${classes.g} ${classNames.g}`} {...props}>
       <rect
-        className={classes.node}
+        className={`${classes.node} ${classNames.node}`}
         width={paddedWidth}
         height={paddedHeight}
         rx={10}
       />
       <text
         ref={idRef}
-        className={classes.text}
+        className={`${classes.text} ${classNames.text}`}
         y={paddedHeight / 2}
         x={paddedWidth / 2}
         textAnchor="middle"

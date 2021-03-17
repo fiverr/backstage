@@ -14,6 +14,7 @@
  * limitations under the License.
  */
 
+import { createStyles, makeStyles } from '@material-ui/core';
 import React from 'react';
 import { DependencyGraph } from './DependencyGraph';
 import { Direction, LabelPosition } from './types';
@@ -172,6 +173,42 @@ export const CustomLabels = () => {
             </text>
           </g>
         )}
+      />
+    </div>
+  );
+};
+
+const useRichNodeStyle = makeStyles(() =>
+  createStyles({
+    g: {
+      '&:hover': {
+        cursor: 'pointer',
+      },
+    },
+    node: {
+      fill: 'aquamarine',
+    },
+    text: {
+      fontSize: '18px',
+    },
+  }),
+);
+
+export const RichNodes = () => {
+  const classes = useRichNodeStyle();
+  const nodes = exampleNodes.map(node => ({
+    ...node,
+    onClick: jest.fn(),
+    classNames: classes,
+  }));
+  return (
+    <div style={containerStyle}>
+      <DependencyGraph
+        nodes={nodes}
+        edges={exampleEdges}
+        style={graphStyle}
+        paddingX={50}
+        paddingY={50}
       />
     </div>
   );
