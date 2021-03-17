@@ -42,7 +42,10 @@ export type DependencyNode<T = CustomType> = T & {
 
 export type GraphNode<T = CustomType> = dagre.Node<DependencyNode<T>>;
 
-export type RenderNodeProps<T = CustomType> = { node: DependencyNode<T> };
+export type RenderNodeProps<T = CustomType> = {
+  node: DependencyNode<T>;
+  classNames?: object;
+};
 
 export type RenderNodeFunction = (
   props: RenderNodeProps<any>,
