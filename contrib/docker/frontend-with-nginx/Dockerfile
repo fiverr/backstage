@@ -1,4 +1,4 @@
-FROM nginx:mainline
+FROM nginx:1.21
 
 # The purpose of this image is to serve the frontend app content separately.
 # By default the Backstage backend uses the app-backend plugin to serve the
